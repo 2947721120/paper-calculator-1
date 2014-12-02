@@ -90,7 +90,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <paper-calculator-output id="output" class="{{ {wide : wideMatches || wideMode} | tokenList}}" expression="{{expression}}" result="{{result}}" error="{{error}}"></paper-calculator-output>
 
-    <paper-calculator-keypad id="keypad" wideMode="{{wideMatches || wideMode}}" standardKeys="{{standardKeys}}" advancedKeys="{{advancedKeys}}" modeKeys="{{modeKeys}}" on-cal-keytap="{{keyTap}}"></paper-calculator-keypad>
+    <paper-calculator-keypad id="keypad" wideMode="{{wideMatches || wideMode}}" standardKeys="{{standardKeys}}" advancedKeys="{{advancedKeys}}" modeKeys="{{modeKeys}}"></paper-calculator-keypad>
 
     <paper-calculator-math id="math" expression="{{expression}}" result="{{result}}" error="{{error}}"></paper-calculator-math>
 
@@ -163,8 +163,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       result: '',
 
       eventDelegates: {
-        keydown: 'keyDown',
-        keypress: 'keyPress'
       },
 
       clear: function() {
